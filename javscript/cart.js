@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const totalEl = document.getElementById("total");
   const emptyCartEl = document.getElementById("empty-cart");
 
-  // ----------------- 🎯 Tooltip init -----------------
+  // -----------------  Tooltip init -----------------
   [...document.querySelectorAll('[data-bs-toggle="tooltip"]')].forEach(
     (el) =>
       new bootstrap.Tooltip(el, {
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
       })
   );
 
-  // ----------------- 🎯 Featured Products Carousel -----------------
+  // -----------------  Featured Products Carousel -----------------
   const track = document.getElementById("carouselTrack");
   if (track) {
     const items = Array.from(track.children);
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 2000);
   }
 
-  // ----------------- 🎯 Footer text -----------------
+  // -----------------  Footer text -----------------
   const footerMap = {
     w1: "Tech-Shop",
     w2: "Subscribe to our Email alerts to receive early discount offers, and new products info",
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ([id, text]) => (document.getElementById(id).innerHTML = text)
   );
 
-  // ----------------- 🎯 Product Filtering -----------------
+  // -----------------  Product Filtering -----------------
   const filterButtons = document.querySelectorAll(".button-container button");
   const products = document.querySelectorAll(".custom-col");
 
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ----------------- 🛒 Cart Helpers -----------------
+  // -----------------  Cart Helpers -----------------
   function updateCartBadgeAndSummary() {
     const uniqueCount = cart.length;
     const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
         discountEl.textContent = `-₹${discount.toLocaleString("en-IN")}`;
     }
 
-    // ✅ Toggle Empty Cart & Order Summary
+    // -------- Toggle Empty Cart & Order Summary----------------
     const orderSummaryEl = document.getElementById("order-summary");
 
     if (cart.length === 0) {
@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (orderSummaryEl) orderSummaryEl.style.display = "block"; // show summary
     }
 
-    // Persist and update counters
+    // ------------------Persist and update counters---------------
     localStorage.setItem(CART_KEY, JSON.stringify(cart));
     updateCartBadgeAndSummary();
   }
@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => badge.classList.remove("cart-bounce"), 500);
   }
 
-  // ----------------- 🛒 Add to Cart Buttons -----------------
+  // -----------------  Add to Cart Buttons -----------------
   document.querySelectorAll(".add-to-cart").forEach((button, index) => {
     button.addEventListener("click", function () {
       const id = this.dataset.id || index;
@@ -198,7 +198,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       renderCart();
 
-      // ✅ Re-init tooltips for dynamic trash icons
+      // -------------Re-init tooltips for dynamic trash icons-----------
       [...document.querySelectorAll('[data-bs-toggle="tooltip"]')].forEach(
         (el) =>
           new bootstrap.Tooltip(el, {
@@ -220,7 +220,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ----------------- 🛒 Cart Quantity & Remove -----------------
+  // ----------------- Cart Quantity & Remove -----------------
   if (cartItemsContainer) {
     cartItemsContainer.addEventListener("click", (e) => {
       const idx =
@@ -239,7 +239,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ----------------- 🚀 Initial Render -----------------
+  // -----------------  Initial Render -----------------
   renderCart();
 });
   //completed
