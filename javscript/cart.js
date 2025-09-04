@@ -187,13 +187,13 @@ document.addEventListener("DOMContentLoaded", () => {
       const oldPrice =
         parseInt((this.dataset.oldprice || "").replace(/[^\d]/g, ""), 10) ||
         price;
-      const img = this.dataset.image;
+      const image = this.dataset.image;
 
       const existing = cart.find((item) => String(item.id) === String(id));
       if (existing) {
         existing.qty += 1;
       } else {
-        cart.push({ id, name, price, oldPrice, img, qty: 1 });
+        cart.push({ id, name, price, oldPrice, image, qty: 1 });
       }
 
       renderCart();
