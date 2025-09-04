@@ -1,4 +1,4 @@
-doocument.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   const CART_KEY = "ts_cart";
   let cart = JSON.parse(localStorage.getItem(CART_KEY)) || [];
 
