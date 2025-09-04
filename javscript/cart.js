@@ -242,4 +242,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // -----------------  Initial Render -----------------
   renderCart();
 });
-  //completed
+
+
+// ---------------completed------------
