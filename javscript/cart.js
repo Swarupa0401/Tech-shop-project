@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  function renderCarts() {
+  function renderCart() {
     if (cartItemsContainer) {
       cartItemsContainer.innerHTML = "";
       let discountedTotal = 0;
