@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         row.innerHTML = `
         <div class="d-flex align-items-center">
-          <img src="${item.img}" alt="${
+          <img src="${item.image}" alt="${
           item.name
         }" width="90" class="me-3 rounded">
           <div class="cart-details">
