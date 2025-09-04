@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   [...document.querySelectorAll('[data-bs-toggle="tooltip"]')].forEach(
     (el) =>
       new bootstrap.Tooltip(el, {
-        customClass: "custom-tooltip", // ✅ custom style
+        customClass: "custom-tooltip", 
       })
   );
 
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  function renderCart() {
+  function renderCarts() {
     if (cartItemsContainer) {
       cartItemsContainer.innerHTML = "";
       let discountedTotal = 0;
