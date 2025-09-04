@@ -64,7 +64,7 @@ body{
   scrollbar-color: #ff4500 rgb(60, 60, 60);
 }
 
-/* Mobile adjustments */
+/* ----------Mobile adjustments------------ */
 @media (max-width: 575.98px) {
   #cart-items {
     max-height: 400px;
@@ -78,7 +78,7 @@ body{
   }
 }
 
-/* Each cart item */
+/* ------------Each cart item------------ */
 .cart-item {
   display: flex;
   flex-direction: column;
@@ -92,7 +92,7 @@ body{
   }
 }
 
-/* Product Image */
+/* ------------Product Image------------------- */
 .cart-item img {
   width: 15vw;
   height: 35vh;
@@ -100,7 +100,7 @@ body{
   padding: 10px;
 }
 
-/* Product Details */
+/*------------ Product Details----------------- */
 .cart-details h6 {
   font-size: 1.3rem;
   font-weight: 700;
@@ -113,7 +113,7 @@ body{
   color: white;
 }
 
-/* --- Price Styling --- */
+/* ------------ Price Styling -------------- */
 .cart-details .price {
   display: flex;
   align-items: center;
@@ -135,7 +135,7 @@ body{
   margin-top: 25px;
 }
 
-/* --- Quantity Actions --- */
+/* -------------------- Quantity Actions ------------------- */
 .cart-actions {
   display: flex;
   align-items: center;
@@ -168,10 +168,10 @@ body{
   margin-top: 1rem;
   margin-left: 0.5rem;
   font-weight: 500;
-  color: #e50914; /* Netflix red qty */
+  color: #e50914; 
 }
 
-/* --- Trash Button --- */
+/* ------------ Trash Button -------------- */
 .remove-btn {
   background: transparent !important;
   border: none !important;
@@ -183,14 +183,14 @@ body{
   margin-right: 3rem;
 }
 
-/* --- Summary Box --- */
+/* ------------------- Summary Box ---------------------- */
 .summary-box {
   background-color: #111;
   padding: 20px;
   border-radius: 8px;
   color: #ddd;
-  margin-top: 20px; /* adjust higher/lower as needed */
-  position: absolute; /* allows fine control */
+  margin-top: 20px; 
+  position: absolute; 
   top: 5.5rem;
   margin-left: 4.5rem;
 }
@@ -215,7 +215,7 @@ body{
 }
 
 .summary-box .discount {
-  color: #00c853; /* bright green like screenshot */
+  color: #00c853; 
 }
 
 .summary-box .total {
@@ -229,7 +229,7 @@ body{
 
 .summary-box .checkout-btn {
   width: 100%;
-  background-color: #ff4d00; /* Netflix red */
+  background-color: #ff4d00; 
   color: #fff;
   font-weight: 600;
   border: none;
@@ -243,9 +243,8 @@ body{
   background-color: #b20710;
 }
 
-/* =========================
-   Empty Cart Styles
-   ========================= */
+
+   /* ------------------Empty Cart Styles -----------*/
 
 /* Cart Wrapper */
 .cart-wrapper {
@@ -306,15 +305,15 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 70vh; /* fill space */
+  min-height: 70vh; 
 }
 
 #empty-cart {
-  display: none; /* default hidden */
+  display: none; 
 }
 
 #cart-items {
-  display: none; /* default hidden, only shown if items exist */
+  display: none; 
 }
 
 /* When cart is empty → take full width, center */
@@ -335,9 +334,7 @@ body{
   align-items: center;
   min-height: 70vh;
   margin-left: 32rem;
-  /* move UP */
-  /* transform: translateY(40px); move DOWN */
-  /* transform: translateX(30px); move RIGHT */
+
 }
 
 .custom-tooltip .tooltip-inner {
